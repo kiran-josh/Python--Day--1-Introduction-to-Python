@@ -1,0 +1,18 @@
+"""
+Name: Kiran G
+Program: write a program that makes a string and returns the number of words in it.
+
+
+"""
+
+# Take input from the user
+input_string = input("Enter a string: ")
+
+# Split the string into words using whitespace as the delimiter
+words = input_string.split()
+
+# Count the number of words
+word_count = len(words)
+
+# Output the result
+print(f"The number of words in the string is: {word_count}")

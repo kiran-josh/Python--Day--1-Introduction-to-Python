@@ -1,0 +1,25 @@
+"""
+Name: Kiran G
+Program: Write a program  that takes a string and returns True if it is a palindrome, false otherwise.
+
+"""
+
+
+# Get input from the user
+input_string = input("Enter a string: ")
+
+# Normalize the string: remove spaces and convert to lowercase
+normalized_string = ''.join(input_string.split()).lower()
+
+# Initialize a flag for palindrome check
+is_palindrome = True
+
+# Check each character from the start and the end
+length = len(normalized_string)
+for i in range(length // 2):
+    if normalized_string[i] != normalized_string[length - 1 - i]:
+        is_palindrome = False
+        break
+
+# Print the result
+print("Is the string a palindrome?", is_palindrome)

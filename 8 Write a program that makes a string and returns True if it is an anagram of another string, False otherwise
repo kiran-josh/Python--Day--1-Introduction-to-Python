@@ -1,0 +1,23 @@
+"""
+Name: Kiran G
+Program: Write a program that makes a string and returns True if it is an anagram of another string, False otherwise.
+
+"""
+
+# Take input from the user
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+
+# Remove spaces and convert to lowercase for comparison
+str1 = str1.replace(" ", "").lower()
+str2 = str2.replace(" ", "").lower()
+
+# Check if the lengths are the same
+if len(str1) != len(str2):
+    is_anagram = False
+else:
+    # Sort both strings and compare
+    is_anagram = sorted(str1) == sorted(str2)
+
+# Output the result
+print(f"Are the two strings anagrams? {is_anagram}")

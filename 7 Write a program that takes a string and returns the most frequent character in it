@@ -1,0 +1,35 @@
+"""
+Name: Kiran G
+Program: write a program that takes two strings and returns the longest common substring between them.
+
+"""
+
+# Take input from the user
+input_string = input("Enter a string: ")
+
+# Create a dictionary to count the frequency of each character
+frequency = {}
+
+# Count each character in the string
+for char in input_string:
+    if char in frequency:
+        frequency[char] += 1
+    else:
+        frequency[char] = 1
+
+# Find the character with the highest frequency
+most_frequent = None
+max_count = 0
+
+for char, count in frequency.items():
+    if count > max_count:
+        max_count = count
+        most_frequent = char
+
+# Output the result
+print(f"The most frequent character is: '{most_frequent}'")
+
+
+
+
+

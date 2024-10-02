@@ -1,0 +1,26 @@
+"""
+Name: Kiran G
+Program: write a program that takes two strings and returns the longest common substring between them.
+
+"""
+
+
+
+# Input strings
+str1 = "automation"
+str2 = "Testing"
+
+# Initializing variables
+longest_substring = ""
+len1, len2 = len(str1), len(str2)
+
+# to Check all substrings of str1
+for i in range(len1):
+    for j in range(i + 1, len1 + 1):
+        substring = str1[i:j]  # to Get the current substring
+        if substring in str2:  # to Check if the substring exists in str2
+            if len(substring) > len(longest_substring):  # to Update if it's longer
+                longest_substring = substring
+
+# Output the result
+print("Longest common substring:", longest_substring)
